@@ -12,7 +12,7 @@ def shift_letter(char, step)
   end
 end
 
-def symbol_shift(original_text, step)
+def encrypt_string(original_text, step)
   split_arr = original_text.split('')
   split_arr.map! { |letter| shift_letter(letter, step) }
   split_arr.join
@@ -29,5 +29,5 @@ loop do
 
   puts 'Enter key: '
   step = gets.chomp.to_i
-  p symbol_shift(text_to_encrypt, step)
+  p encrypt_string(text_to_encrypt, step)
 end
