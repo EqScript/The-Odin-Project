@@ -9,6 +9,7 @@ def shift_letter(char, step)
   elsif UPCASE_RANGE.include?(char_code)
     new_char_code = (char_code - UPCASE_RANGE.first + step) % 26 + UPCASE_RANGE.first
     new_char_code.chr
+  else char
   end
 end
 
