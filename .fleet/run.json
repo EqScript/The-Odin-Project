@@ -3,7 +3,7 @@
         {
             "type": "command",
             "name": "Command configuration",
-            "program": "",
+            "program": "C:/Ruby32-x64/bin/ruby.exe",
         }
         ,
         
