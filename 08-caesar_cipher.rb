@@ -30,5 +30,5 @@ loop do
 
   puts 'Enter key: '
   step = gets.chomp.to_i
-  p encrypt_string(text_to_encrypt, step)
+  puts encrypt_string(text_to_encrypt, step)
 end
