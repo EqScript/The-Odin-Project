@@ -1,14 +1,17 @@
+# Method calculates number of entries of the keywords in the provided string array
+# It's case insensitive - both input arrays are #downcase before looping
 def count_substrings (keywords, dictionary)
   keywords.map!(&:downcase)
   dictionary.map!(&:downcase)
   result = {}
+
   keywords.each do  |keyword|
     counter = 0
+    #  Searching for a keyword in the dictionary array
     dictionary.each do |word|
-      if word.include?(keyword)
-        counter += 1
-      end
+      counter += 1 if word.include?(keyword)
     end
+    #  filling hash with 'key' => found_amount
     result[keyword] = counter
   end
   result
@@ -36,7 +39,7 @@ def fill_keywords
   keywords
 end
 
-#******************** void main()  ************************#
+#******************** void main()  **********************#
 divider = :_______________________________
 dictionary = fill_dictionary
 puts divider
