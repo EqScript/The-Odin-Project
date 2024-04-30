@@ -17,27 +17,36 @@ def stock_picker (prices_list)
   right_pointer = prices_list_sorted.length - 1
   result = nil
 
+  # The prices are already sorted from L ro R so we don't compare them
   while left_pointer < right_pointer && result.nil?
+    # Lowest price
     left_day_number = prices_list_sorted[left_pointer][0] + 1
+    # Highest price
     right_day_number = prices_list_sorted[right_pointer][0] + 1
 
-    if left_day_number < right_day_number
+    if left_day_number < right_day_number && prices_list_sorted[left_pointer][1] != prices_list_sorted[right_pointer][1]
       #  Prices are sorted in the array but the Days Numbers aren't
-      #  So, we're getting result only if the DayNumLeft < DayNumRight
+      #  So, we're getting result only if the DayNumLeft < DayNumRight and the prices are different
       result = [left_day_number, right_day_number]
     else
       # Otherwise we move the RightPointer to the < and keep searching
       right_pointer -= 1
-      next if right_pointer > left_pointer
-    end
 
-    left_pointer += 1
+      if right_pointer <= left_pointer
+        right_pointer = prices_list_sorted.length - 1
+        left_pointer += 1
+      end
+
+    end
   end
   result
 end
 
 
 #         *****  void main()  *****
-input = [78220, 2, 10, 4, 10, 10, 33, 10019, 700, 13, 8950]
+input = [ 3,13,133,310,1311,111 ]
 output = stock_picker(input)
 p output
+
+#  To-do: rewrite the method with actually prices comparing
+#  instead of relying on the sort by price
