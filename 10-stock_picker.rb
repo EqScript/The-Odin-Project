@@ -48,5 +48,4 @@ input = [ 3,13,133,310,1311,111 ]
 output = stock_picker(input)
 p output
 
-#  To-do: rewrite the method with actually prices comparing
-#  instead of relying on the sort by price
+
