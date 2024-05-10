@@ -2,6 +2,10 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "name": "PWM-Termostat",
+      "path": "../../PWM-Termostat/PWM-Termostat"
     }
   ]
 }
