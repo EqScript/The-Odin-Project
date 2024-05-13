@@ -28,6 +28,5 @@ class Celsius
 end
 
 
-
 temperature = Celsius.new(25)
 puts "Temperature is #{temperature.get_celsius}C or #{temperature.get_fahrenheit}F degrees!"
