@@ -14,7 +14,6 @@ simba = Lion.new("Simba")
 str = "#{simba.return_lions_name} - is the best lion ever!"
 puts str
 
-
 class Celsius
   def initialize(temp)
     @temp_celsius = temp.to_i
@@ -29,10 +28,8 @@ class Celsius
   end
 end
 
-
 temperature = Celsius.new(25)
 puts "Temperature is #{temperature.get_celsius}C or #{temperature.get_fahrenheit}F degrees!"
-
 
 class Dog
   def initialize(name)
@@ -47,7 +44,6 @@ end
 puts DIVIDER
 puppy = Dog.new("Puppy")
 puts puppy.bark()
-
 
 class Insect
   def initialize(age_in_days)
@@ -90,6 +86,7 @@ class Person
   def initialize(age = 18)
     @age = age
   end
+
   def set_age(age)
     @age = age
   end
@@ -97,6 +94,7 @@ class Person
   def self.get_age
     @age
   end
+
   def get_age
     @age
   end
@@ -107,7 +105,6 @@ kirk = Person.new
 puts kirk.inspect
 kirk.set_age(23)
 puts "Age set to: #{kirk.get_age}"
-
 
 ###########################################
 
@@ -142,7 +139,7 @@ class BaseballPlayer
 end
 
 puts DIVIDER
-johnson = BaseballPlayer.new(120, 220, 70 )
+johnson = BaseballPlayer.new(120, 220, 70)
 puts "Batting average: #{johnson.batting_average}"
 puts "On base: #{johnson.on_base_percentage}%"
 
@@ -178,6 +175,7 @@ end
 
 class Calculator
   include MathHelpers
+
   def square_root(base)
     exponent(base, 0.5)
   end
@@ -185,6 +183,6 @@ end
 
 puts DIVIDER
 calc = Calculator.new
-puts calc.exponent(5,2)
+puts calc.exponent(5, 2)
 puts calc.square_root(99)
 
